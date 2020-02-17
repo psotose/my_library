@@ -17,7 +17,7 @@ class BooksTest < ApplicationSystemTestCase
     fill_in "Author", with: @book.author
     fill_in "Borrow date", with: @book.borrow_date
     fill_in "Returned date", with: @book.returned_date
-    check "Status" if @book.status
+    fill_in "Status", with: @book.status
     fill_in "Title", with: @book.title
     click_on "Create Book"
 
@@ -32,7 +32,7 @@ class BooksTest < ApplicationSystemTestCase
     fill_in "Author", with: @book.author
     fill_in "Borrow date", with: @book.borrow_date
     fill_in "Returned date", with: @book.returned_date
-    check "Status" if @book.status
+    fill_in "Status", with: @book.status
     fill_in "Title", with: @book.title
     click_on "Update Book"
 

@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :Título %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :author %>
+    <%= form.label :Autor %>
     <%= form.text_field :author %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
-    <%= form.check_box :status %>
+    <%= form.label :Status %>
+    <%= form.select :status, Book.statuses.keys, class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :borrow_date %>
-    <%= form.date_select :borrow_date %>
+    <%= form.label :'Fecha préstamo' %>
+    <%= form.date_select :borrow_date, placeholder: 'borrow_date', class: "#{'display:none' if :status == 0 }" %>
   </div>
 
   <div class="field">
-    <%= form.label :returned_date %>
+    <%= form.label :'Devuelto el:' %>
     <%= form.date_select :returned_date %>
   </div>
 

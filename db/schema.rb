@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_16_175519) do
+ActiveRecord::Schema.define(version: 2020_02_17_003213) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
-    t.boolean "status", default: false
+    t.integer "status", default: 0
     t.date "borrow_date"
     t.date "returned_date"
     t.datetime "created_at", null: false

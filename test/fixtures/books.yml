@@ -3,13 +3,13 @@
 one:
   title: MyString
   author: MyString
-  status: false
+  status: 1
   borrow_date: 2020-02-16
   returned_date: 2020-02-16
 
 two:
   title: MyString
   author: MyString
-  status: false
+  status: 1
   borrow_date: 2020-02-16
   returned_date: 2020-02-16
