@@ -26,9 +26,9 @@
     <%= form.select :status, Book.statuses.keys, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div id="hide_div"  class="field">
     <%= form.label :'Fecha préstamo' %>
-    <%= form.date_select :borrow_date, placeholder: 'borrow_date', class: "#{'display:none' if :status == 0 }" %>
+    <%= form.date_select :borrow_date, placeholder: 'borrow_date' %>
   </div>
 
   <div class="field">

@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+$(function() {
+    $("#listaUsos").change(function(){
+        if($("option:selected", this).text() == 'FISICO'){
+            $(".requerido-con-fisico").show();
+        }else{
+            $(".requerido-con-fisico").hide();                
+        }
+    });
+});

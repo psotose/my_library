@@ -5,7 +5,9 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @q = Book.ransack(params[:q])
-    @books = @q.result(distinct: true)
+    @books = @q.result(distinct: true).order(title: :ASC)
+
+    @books = @books.order(:name).page(params[:page])
   end
 
   # GET /books/1

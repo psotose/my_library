@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<%= paginate @books %>
 <h1>Mi biblioteca</h1>
+<div>
 <div class="row">
     <div class="col-sm-4 my-4">
         <%= search_form_for @q do |f|%>
@@ -14,10 +15,14 @@
             </div>
         <% end  %>    
     </div> 
+    <div class="offset-sm-6 mt-5">
+      <button type="button" class="btn btn-outline-primary text-right">
+        <%= link_to 'New Book', new_book_path %>
+      </button>
+    </div>
 </div>
 
-
-
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -47,4 +52,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+
