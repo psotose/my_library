@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%= paginate @books %>
+
 <h1>Mi biblioteca</h1>
 <div>
 <div class="row">
@@ -41,8 +41,13 @@
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.status %></td>
+        <% if book.status == 'prestado' %>
         <td><%= book.borrow_date %></td>
         <td><%= book.returned_date %></td>
+        <%else%>
+        <td><%=''%></td>
+        <td><%=''%></td>
+        <%end%>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -50,6 +55,6 @@
   </tbody>
 </table>
 
-<br>
+ 
 
 

@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :Título %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Título</label>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :Autor %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Autor</label>
     <%= form.text_field :author %>
   </div>
 
@@ -26,7 +26,7 @@
     <%= form.select :status, Book.statuses.keys, class:'form-control' %>
   </div>
 
-  <div id="hide_div"  class="field">
+  <div class="field">
     <%= form.label :'Fecha préstamo' %>
     <%= form.date_select :borrow_date, placeholder: 'borrow_date' %>
   </div>
@@ -40,3 +40,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+  
+ 

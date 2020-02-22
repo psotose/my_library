@@ -7,7 +7,7 @@ class BooksController < ApplicationController
     @q = Book.ransack(params[:q])
     @books = @q.result(distinct: true).order(title: :ASC)
 
-    @books = @books.order(:name).page(params[:page])
+    @books = @books.order(:name)
   end
 
   # GET /books/1

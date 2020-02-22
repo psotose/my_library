@@ -1,5 +1,4 @@
 class Book < ApplicationRecord
-    max_paginates_per 100
     enum status: [:'en estante', :prestado]
     validates :title, presence: { message: "No te olvides de poner el título del libro" }
     before_validation { |book| book.title.upcase! }
